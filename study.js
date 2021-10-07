@@ -58,3 +58,14 @@ const source = { b: 4, c: 5 };
 //Object.keys(A) >> A의 키 값만 반환
 console.log(Object.assign(target, source)) // {a: 1, b: 4, c: 5}
 console.log(Object.keys(target)) //['a', 'b', 'c']
+
+
+
+
+///// 정규표현식
+
+//생성자                     // 리터럴
+new RegExp('표현', '옵션')   //   /표현/ 옵션
+new RegExp('[a-z]', 'gi')  //   /[a-z]/ gi
+// 정규표현식 사이트에서 확인하기   https://heropy.blog/2018/10/28/regexp/ 추천
+
