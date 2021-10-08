@@ -1,0 +1,47 @@
+$color:royalblue;  //변수설정은 $필요
+
+.container{
+  h1 {
+    color: $color;
+  }
+}
+
+@mixin box($size:100px, $color2:tomato){  //믹스인으로 여러 요소를 묶은 변수를 만들 수 있음
+  width: $size;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  @include box(80px, green) //  @include box($color2:green)  처럼 매개변수 순서를 스킵하여 $으로 직접 매칭가능
+}
+
+//반복문
+
+@for $i from 1 through 10{     //선언방법
+  .box:nth-child(#{i}){        // js 에서 $`{와 같음}`
+    width: 100px * $i;
+  }
+}
+
+//함수
+
+@function ratio($size, $ratio){    //함수 선언
+  @return $size * $ratio
+}
+
+.box2 {
+  $width: 100px;
+  width: $width;
+  height: ratio($width, 9/16);  //함수 활용
+  @include center;
+}
+
+//색상 내장함수 
+// mix (A,B) =>색상을 섞어줌, lighten(color, x%) => 밝게해줌 // darken 어둡게해줌 // saturate 채도올림 // desaturate 채도내림
+// grayscale() 흑백화 // invert()색상반전 // rgba (color, 투명도) 투명도 설정
+
+
+
+// scss 끼리 연결 방법
+// @import "경로", "경로2"; 이런식으로 다중으로 가져올 수 있음  
