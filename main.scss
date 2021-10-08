@@ -41,7 +41,9 @@ $color:royalblue;  //변수설정은 $필요
 // mix (A,B) =>색상을 섞어줌, lighten(color, x%) => 밝게해줌 // darken 어둡게해줌 // saturate 채도올림 // desaturate 채도내림
 // grayscale() 흑백화 // invert()색상반전 // rgba (color, 투명도) 투명도 설정
 
-
-
 // scss 끼리 연결 방법
 // @import "경로", "경로2"; 이런식으로 다중으로 가져올 수 있음  
+
+// map 데이터 타입을 사용할 수 잇음
+// $map:(o:orange, r:royalblue, y:yellow); 이런식으로 선언가능, 키 밸류 형태
+// @each $c in $list { color :$c } 이런식으로 맵 사용 가능
